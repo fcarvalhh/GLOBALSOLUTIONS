@@ -133,6 +133,8 @@ body {
     
 }
 
+
+
 .card-aboutus {
     height: 500px;
     width: 80%; 
@@ -189,12 +191,14 @@ body {
 }
 
 .partner-logos img {
-    height: 100px; 
+    height: 100px;
+    width: 100px;
     object-fit: contain; 
     margin: 10px; 
     display: inline-block; 
     vertical-align: middle; 
 }
+
 
 .call-to-action {
     text-align: center;
