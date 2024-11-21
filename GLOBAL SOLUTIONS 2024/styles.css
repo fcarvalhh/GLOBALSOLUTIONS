@@ -16,7 +16,7 @@ body {
 .navbar {
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
     background: #2c3e50;
@@ -26,6 +26,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+    
 }
 
 .navbar .logo {
@@ -36,10 +37,12 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+    margin: 15px;
 }
 
 .nav-links li {
-    margin-left: 1.5rem;
+    margin-left: 2.5rem;
+
 }
 
 .nav-links a {
@@ -47,6 +50,7 @@ body {
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-size: 1.3rem;
 }
 
 .nav-links a:hover {
@@ -248,70 +252,147 @@ footer {
     }
 }
 
-    .faleConosco {
-        width: 50%;
-        margin: 30px auto;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+/* Formatação do formulario até a linha 398*/
 
-    .faleConosco body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
-        margin: 0;
-        padding: 0;
-    }
+.faleConosco {
+    width: 60%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #f4f4f9, #ffffff);
+}
 
-    .faleConosco h2 {
-        text-align: center;
-        color: #333;
-    }
 
-    .faleConosco form {
-        display: grid;
-        gap: 15px;
-    }
+.faleConosco body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f4f9; 
+    margin: 0;
+    padding: 0;
+}
 
-    .faleConosco label {
-        font-size: 18px;
-        color: #101010;
-    }
 
-    .faleConosco input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 14px;
-        color: #555;
-    }
+.faleConosco h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    background: linear-gradient(to right, #2c3e50, #18bc9c); /* Gradiente suave para o fundo */
+    padding: 15px 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    .faleConosco textarea {
-        resize: vertical;
-        height: 150px;
-    }
 
-    .faleConosco button {
-        padding: 10px 20px;
-        background-color: #2c3e50;
+.faleConosco form {
+    display: grid;
+    gap: 25px; 
+}
+
+
+.faleConosco label {
+    font-size: 16px;
+    color: #333; 
+    font-weight: bold;
+}
+
+
+.faleConosco input, .faleConosco select, .faleConosco textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #555;
+    background-color: #fff; 
+    transition: all 0.3s ease; 
+}
+
+.faleConosco input:focus, .faleConosco select:focus, .faleConosco textarea:focus {
+    border-color: #3498db; 
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2); 
+}
+
+.faleConosco textarea {
+    resize: vertical;
+    height: 150px; 
+}
+
+
+.faleConosco button {
+    padding: 12px 30px;
+    background-color: #18bc9c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.faleConosco button:hover {
+    background-color: #1abc9c;
+    transform: translateY(-3px); 
+}
+
+
+.faleConosco .form-group {
+    display: flex;
+    gap: 20px; 
+}
+
+.faleConosco .form-group input {
+    width: 48%; 
+}
+
+
+.faleConosco input, .faleConosco textarea, .faleConosco select {
+    border-radius: 12px; 
+    border: 2px solid #ddd; 
+}
+
+
+.faleConosco input:focus, .faleConosco select:focus, .faleConosco textarea:focus {
+    border-color: #3498db;
+    outline: none; 
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3); 
+}
+
+    .sucesso-alert {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #18bc9c;
         color: white;
-        border: none;
+        padding: 15px 30px;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        z-index: 1000;
+        text-align: center;
+    }
+    
+    .sucesso-alert.show {
+        display: block;
+    }
+    
+    
+    .sucesso-alert p {
+        margin: 0;
+    }
+    
+    .sucesso-alert button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
         cursor: pointer;
+        margin-left: 20px;
     }
-
-    .faleConosco button:hover {
-        background-color: #243241;
-    }
-
-    .faleConosco form-group {
-        display: flex;
-        gap: 15px;
-    }
-
-    .faleConosco form-group input {
-        width: 48%;
-    } 
-

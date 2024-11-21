@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco</title>
+    <title>Fale com a EcoRacers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
    
@@ -15,18 +15,16 @@
                 <li><a href="about.html">Sobre</a></li>
                 <li><a href="resources.html">Recursos</a></li>
                 <li><a href="partners.html">Parcerias</a></li>
-                <li><a href="contact.html">Contato</a></li>
+                <li><a href="fale-conosco.html">Fale conosco</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="https://www.youtube.com/watch?v=q86g1aop6a8&ab_channel=JackAssir" target="_blank">Youtube Video</a></li> <!-- FC - Depois mudar o link do vídeo pro pitch video, não esquecer.-->
-
-                <script src="script.js" defer></script>
+                <li><a href="https://www.youtube.com/watch?v=q86g1aop6a8&ab_channel=JackAssir" target="_blank">Youtube Video</a></li> 
             </ul>
         </nav>
     </header>
 
     <div class="faleConosco">
         <h2>Fale Conosco</h2>
-        <form action="#" method="post">
+        <form id="formulario" onsubmit="return enviarFormulario(event)">
             <label for="assunto">Assunto:</label>
             <input type="text" id="assunto" name="assunto" required>
 
@@ -37,21 +35,27 @@
             <input type="email" id="email" name="email" required>
 
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+            <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
 
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" required>
+            <input type="text" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
 
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" required></textarea>
 
             <button type="submit">Enviar</button>
         </form>
+
+        <!-- Alerta de sucesso -->
+        <div id="sucesso-alert" class="sucesso-alert">
+            <p>Formulário enviado, nossa equipe entrará em contato em breve!</p>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Plataforma Sustentável - EcoRacers. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="script.js" defer></script>
 </body>
 </html>
