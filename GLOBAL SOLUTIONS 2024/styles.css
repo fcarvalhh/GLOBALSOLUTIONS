@@ -152,7 +152,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
     align-items: center;
     margin: 0px 80px;
+   
 }
+
+.card-aboutus:hover {
+    transform: rotate(2deg) scale(1.03); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    background-color: #f0f8ff;
+}
+
+
     
 
 
