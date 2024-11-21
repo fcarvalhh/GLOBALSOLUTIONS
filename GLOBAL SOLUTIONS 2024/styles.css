@@ -173,6 +173,12 @@ body {
    
 }
 
+.card-aboutus h3{
+    color: #18bc9c;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
 .card-partners{
     height: 200px;
     width: 80%; 
@@ -188,6 +194,8 @@ body {
     margin: 0px 80px;
     
 }
+
+
 
 .partner-logos{
     display: flex;
