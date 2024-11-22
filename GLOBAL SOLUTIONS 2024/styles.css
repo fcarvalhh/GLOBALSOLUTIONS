@@ -14,7 +14,7 @@ body {
 
 
 
-/* Navbar fixada no topo */
+
 .navbar {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -23,11 +23,11 @@ body {
     padding: 1rem 2rem;
     background: #2c3e50;
     color: #fff;
-    position: fixed; /* Fixa a navbar no topo */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+    z-index: 1000; 
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -65,9 +65,9 @@ body {
     width: 4%;
    
 }
-/* Deixe um espaçamento extra no topo do corpo para não sobrepor o conteúdo à navbar */
+
 body {
-    padding-top: 70px; /* Ajuste conforme o tamanho da navbar */
+    padding-top: 70px; 
 }
 
 .hero {

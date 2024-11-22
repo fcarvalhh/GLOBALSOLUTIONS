@@ -58,7 +58,7 @@ function enviarFormulario(event) {
 
  
     if (!validarCPF(cpf)) {
-        alert("CPF inválido, digite novamente!.");
+        alert("CPF inválido, digite novamente!");
         return false;
     }
 
